@@ -2,14 +2,12 @@
   <v-navigation-drawer
     id="default-drawer"
     :right="$vuetify.rtl"
-    :src="drawerImage ? image : ''"
-     :mini-variant.sync="mini"
+    :mini-variant.sync="mini"
     mini-variant-width="80"
     v-model="drawer"
     app
     width="260"
   >
-
     <div class="px-2">
       <drawer-header />
 
@@ -40,7 +38,7 @@ export default {
   name: "DefaultDrawer",
 
   computed: {
-    ...mapFields(["mini","drawer"]),
+    ...mapFields(["mini", "drawer"]),
   },
   data() {
     return {
@@ -67,24 +65,21 @@ export default {
       ],
     };
   },
-
 };
 </script>
 
 <style lang="sass">
 #default-drawer
 .v-list-item
-    margin-bottom: 8px
+  margin-bottom: 8px
 
 .v-list-item::before,
 .v-list-item::after
-    display: none
+  display: none
 
 .v-list-group__header__prepend-icon,
 .v-list-item__icon
-    margin-top: 12px
-    margin-bottom: 12px
-    margin-left: 4px
-
-
+  margin-top: 12px
+  margin-bottom: 12px
+  margin-left: 4px
 </style>
