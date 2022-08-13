@@ -13,6 +13,17 @@
         <th>Stocks count</th>
         <td>{{ stocksCount }}</td>
       </tr>
+
+      <tr>
+        <th>Stocks best price for buying </th>
+        <td>{{ buy_point_price }} USD</td>
+      </tr>
+ 
+      <tr>
+        <th>Stocks best price for selling </th>
+        <td>{{ sell_point_price }} USD</td>
+      </tr>
+ 
       <tr>
         <th>Your funds</th>
         <td>{{ funds }} USD</td>
@@ -22,6 +33,7 @@
         <th>You invest</th>
         <td>{{ investition }} USD</td>
       </tr>
+
       <tr>
         <th>Your profit</th>
         <td>{{ profit }} USD</td>
@@ -74,11 +86,10 @@ export default {
       return moment(this.sell_point * 1000).format(this.date_format);
     },
     stocksCount() {
-      //stocks count should be an integer (or not? can you own 0.5 stocks?)
-      return Math.floor(this.funds / this.buy_point_price);
+      return (this.funds / this.buy_point_price).toFixed(2)
     },
     profit() {
-      return Math.floor(this.stocksCount * this.sell_point_price - this.funds);
+      return (this.stocksCount * this.sell_point_price - this.funds).toFixed(2);
     },
   },
 };
