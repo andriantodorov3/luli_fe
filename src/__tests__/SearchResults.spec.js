@@ -1,7 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import Komponent from '@/views/SearchResults.vue'
 import moment from "moment";
-import { target } from 'vuelidate/lib/params';
 
 describe('SearchResults.vue', () => {
     const someTimestamp = Math.floor(Date.now() / 1000);
@@ -75,7 +74,6 @@ describe('SearchResults.vue', () => {
         const target = (stocksCount * props.sell_point_price - props.funds).toFixed(2);
         expect(wrapper.find('#profit td').text()).toMatch(`${target} USD`)
     })
-
 
 
 })
