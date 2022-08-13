@@ -24,7 +24,6 @@ export default {
     };
   },
 
-  //props: ["timeout", "autoclose", "type"],
   props: {
     timeout: {
       type: Number,
