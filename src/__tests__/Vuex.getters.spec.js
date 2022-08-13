@@ -7,10 +7,7 @@ describe('getters', () => {
         const state = {
             bus: bus,
             drawer: null,
-            drawerImage: true,
-            image: null,
             mini: false,
-            gradient: '',
         };
 
 
