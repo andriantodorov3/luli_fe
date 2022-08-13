@@ -1,5 +1,5 @@
 <template>
-  <v-btn class="ml-3 mr-4" elevation="1" fab small @click="mini = !mini">
+  <v-btn class="ml-3 mr-4" elevation="1" fab small @click="mini = !mini" id="mini-toggler">
     <v-icon>
       {{ mini ? "mdi-format-list-bulleted" : "mdi-dots-vertical" }}
     </v-icon>
