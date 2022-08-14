@@ -1,5 +1,5 @@
   <template>
-  <v-snackbar v-model="shown" :timeout="30000">
+  <v-snackbar v-model="shown" :timeout="timeout">
     {{ msg }}
 
     <template v-slot:action="{ attrs }">
@@ -20,14 +20,14 @@ export default {
       msg: "",
       shown: false,
       l_autoclose: this.autoclose,
-      l_type: this.type ,
+      l_type: this.type,
     };
   },
 
   props: {
     timeout: {
       type: Number,
-      default: 3000
+      default: 30000,
     },
     autoclose: {
       type: Boolean,
@@ -35,8 +35,8 @@ export default {
     },
     type: {
       type: String,
-      default: 'confirm'
-    }
+      default: "confirm",
+    },
   },
   computed: {
     ...mapFields(["bus"]),
