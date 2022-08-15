@@ -7,6 +7,7 @@ import Vuetify from 'vuetify'
 
 import Vue from 'vue';
 
+import flushPromises from 'flush-promises';
 
 import VueRouter from 'vue-router'
 
@@ -245,3 +246,40 @@ describe('Form events', () => {
 
 
 })
+
+describe('Snapshot', () => {
+
+    const localVue = createLocalVue()
+    let vuetify
+
+    const router = new VueRouter()
+
+    localVue.use(VueRouter)
+
+    beforeEach(() => {
+        vuetify = new Vuetify()
+    })
+
+
+    it('Checks snapshot', async() => {
+
+        const props = {
+            end_errors: [],
+            start_errors: [],
+            loading: false,
+        };
+
+        const wrapper = mount(Komponent, {
+            propsData: props,
+            localVue,
+            vuetify,
+            store,
+            router,
+
+        })
+
+        await flushPromises();
+
+        expect(wrapper.element).toMatchSnapshot();
+    })
+});

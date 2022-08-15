@@ -1,9 +1,11 @@
-import { shallowMount } from '@vue/test-utils'
+import { shallowMount, mount, createLocalVue } from '@vue/test-utils'
 import Komponent from '@/views/SearchResults.vue'
 import moment from "moment";
+import flushPromises from 'flush-promises';
+
+const someTimestamp = 1660567551;
 
 describe('SearchResults.vue', () => {
-    const someTimestamp = Math.floor(Date.now() / 1000);
     const props = {
         buy_point: someTimestamp - 3600,
         sell_point: someTimestamp,
@@ -77,3 +79,33 @@ describe('SearchResults.vue', () => {
 
 
 })
+
+
+
+describe('Snapshot', () => {
+
+    const localVue = createLocalVue()
+
+
+
+    it('Checks snapshot', async() => {
+        const props = {
+            buy_point: someTimestamp - 3600,
+            sell_point: someTimestamp,
+            buy_point_price: 10,
+            sell_point_price: 100,
+            funds: 100,
+            date_format: "MMMM Do YYYY, h:mm:ss a"
+        };
+
+        const wrapper = mount(Komponent, {
+            propsData: props,
+            localVue,
+
+        })
+
+        await flushPromises();
+
+        expect(wrapper.element).toMatchSnapshot();
+    })
+});

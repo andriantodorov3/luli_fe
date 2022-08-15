@@ -3,7 +3,7 @@ import Komponent from '@/components/DrawerHeader.vue'
 
 describe('DrawerHeader.vue', () => {
     it('Sanity check', () => {
-        const wrapper = mount(Komponent)
+        mount(Komponent)
         return;
     })
 

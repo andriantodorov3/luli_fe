@@ -70,3 +70,27 @@ describe('Search Results', () => {
 
 
 })
+
+
+
+describe('Snapshot', () => {
+
+    const localVue = createLocalVue()
+
+    let vuetify
+
+    beforeEach(() => {
+        vuetify = new Vuetify()
+    })
+
+    it('Checks snapshot', async() => {
+        const wrapper = mount(Komponent, {
+            localVue,
+            vuetify,
+            store,
+            router
+        });
+
+        expect(wrapper.element).toMatchSnapshot();
+    })
+});
