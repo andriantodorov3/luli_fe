@@ -1,21 +1,10 @@
 <template>
   <v-form ref="form" lazy-validation>
     <v-container class="new-capsule-wrapper lighten-5" :fluid="false">
-      <v-row justify="space-around">
+      <v-row class="space-around align-center justify-space-around">
         <v-col lg="3" sm="6" md="4" class="pt-2">
           <v-icon class="mr-2">mdi-clock-time-four-outline</v-icon>
-          <label>
-            Select timeframe
-            <v-tooltip top>
-              <template v-slot:activator="{ on, attrs }">
-                <v-icon v-bind="attrs" v-on="on">mdi-info-outline</v-icon>
-              </template>
-              <span>
-                Select start and end date for your search (and provide me better
-                texts;) ).
-              </span>
-            </v-tooltip>
-          </label>
+          <label> Select timeframe </label>
         </v-col>
         <v-col lg="9" sm="6" md="8">
           <v-text-field
@@ -29,6 +18,7 @@
             :error-messages="[...start_errors, ...datePickerStartError]"
             @input="$v.date_picker_start.$touch()"
             @blur="$v.date_picker_start.$touch()"
+            id="date_picker_start"
           ></v-text-field>
 
           <v-text-field
@@ -42,6 +32,7 @@
             :error-messages="[...end_errors, ...datePickerEndError]"
             @input="$v.date_picker_end.$touch()"
             @blur="$v.date_picker_end.$touch()"
+            id="date_picker_end"
           ></v-text-field>
         </v-col>
       </v-row>
@@ -73,6 +64,7 @@
             color="blue"
             @click="validate"
             :disabled="loading"
+            id="search-btn"
           >
             <template v-if="loading">
               <loading>Loading...</loading>
@@ -129,25 +121,6 @@ export default {
           funds: this.funds,
         });
       }
-    },
-
-    errorstest() {
-      let errors = [];
-      if (
-        !this.$v.date_picker_start.$dirty ||
-        !this.$v.date_picker_start.$invalid
-      ) {
-        return errors;
-      }
-
-      if (!this.$v.date_picker_start.required) {
-        errors.push("Please enter start time");
-      }
-      !this.$v.date_picker_start.minValue &&
-        this.date_picker_end != undefined &&
-        errors.push(`Start date must be before end date`);
-
-      return errors;
     },
   },
   computed: {

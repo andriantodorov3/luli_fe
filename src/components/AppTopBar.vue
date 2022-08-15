@@ -10,8 +10,7 @@
     height="70"
     flat
   >
-
-    <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = !drawer" />
+    <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = !drawer" id="drawer-toggle-btn" />
     <drawer-toggle class="hidden-sm-and-down" />
 
     <v-toolbar-title class="font-weight-light text-h5" v-text="name" />
@@ -19,16 +18,12 @@
     <v-spacer />
 
     <home-button />
-
-    <!--
-    <default-notifications />
-    -->
   </v-app-bar>
 </template>
 
 <script>
 import HomeButton from "./HomeButton.vue";
-import DrawerToggle from './DrawerToggle.vue'
+import DrawerToggle from "./DrawerToggle.vue";
 
 import { mapFields } from "vuex-map-fields";
 export default {

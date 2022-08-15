@@ -45,7 +45,7 @@
 import StockSearchForm from "../components/StockSearchForm.vue";
 
 import { mapGetters } from "vuex";
-import { searchStocks } from "@/_api/";
+import { searchStocks } from "@/_api/backend";
 import SearchResults from "./SearchResults.vue";
 export default {
   name: "Home",
