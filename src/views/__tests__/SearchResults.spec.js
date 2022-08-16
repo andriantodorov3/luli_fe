@@ -3,7 +3,7 @@ import Komponent from '@/views/SearchResults.vue'
 import moment from "moment";
 import flushPromises from 'flush-promises';
 
-const someTimestamp = 1660567551;
+const someTimestamp = 1660112800;
 
 describe('SearchResults.vue', () => {
     const props = {
@@ -19,7 +19,7 @@ describe('SearchResults.vue', () => {
         const wrapper = shallowMount(Komponent, {
             propsData: props
         })
-        const target = moment.unix(props.buy_point * 1000).format(props.date_format);
+        const target = moment.unix(props.buy_point).format(props.date_format);
         expect(wrapper.find('#buy_point_date td').text()).toMatch(`${target}`)
     })
 
