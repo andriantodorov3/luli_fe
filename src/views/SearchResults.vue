@@ -71,10 +71,10 @@ export default {
   },
   computed: {
     buy_point_as_date() {
-      return moment.unix(this.buy_point * 1000).format(this.date_format);
+      return moment.unix(this.buy_point ).format(this.date_format);
     },
     sell_point_as_date() {
-      return moment.unix(this.sell_point * 1000).format(this.date_format);
+      return moment.unix(this.sell_point ).format(this.date_format);
     },
     stocksCount() {
       return (this.funds / this.buy_point_price).toFixed(2)
