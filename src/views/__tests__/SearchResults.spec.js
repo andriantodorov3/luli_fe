@@ -27,7 +27,7 @@ describe('SearchResults.vue', () => {
         const wrapper = shallowMount(Komponent, {
             propsData: props
         })
-        const target = moment.unix(props.sell_point * 1000).format(props.date_format);
+        const target = moment.unix(props.sell_point).format(props.date_format);
         expect(wrapper.find('#sell_point_date td').text()).toMatch(`${target}`)
     })
 
