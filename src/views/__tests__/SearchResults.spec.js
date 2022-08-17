@@ -3,7 +3,7 @@ import Komponent from '@/views/SearchResults.vue'
 import moment from "moment";
 import flushPromises from 'flush-promises';
 
-const someTimestamp = 1660112800;
+const someTimestamp = 1660112801;
 
 describe('SearchResults.vue', () => {
     const props = {
