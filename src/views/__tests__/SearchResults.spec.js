@@ -95,7 +95,8 @@ describe('Snapshot', () => {
             buy_point_price: 10,
             sell_point_price: 100,
             funds: 100,
-            date_format: "MMMM Do YYYY, h:mm:ss a"
+            //this is to avoid timezone offsets for ci
+            date_format: 'x'
         };
 
         const wrapper = mount(Komponent, {
