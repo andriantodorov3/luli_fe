@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Checks snapshot 1`] = `
+<section
+  class="search-results"
+>
+  <table>
+    <tr
+      id="buy_point_date"
+    >
+      <th>
+        Best time to buy
+      </th>
+       
+      <td>
+        March 6th 54591, 6:10:00 am
+      </td>
+    </tr>
+     
+    <tr
+      id="sell_point_date"
+    >
+      <th>
+        Best time to sell
+      </th>
+       
+      <td>
+        April 16th 54591, 11:10:00 pm
+      </td>
+    </tr>
+     
+    <tr
+      id="stocks_count"
+    >
+      <th>
+        Stocks count
+      </th>
+       
+      <td>
+        10.00
+      </td>
+    </tr>
+     
+    <tr
+      id="buy_point_price"
+    >
+      <th>
+        Stocks best price for buying 
+      </th>
+       
+      <td>
+        10 USD
+      </td>
+    </tr>
+     
+    <tr
+      id="sell_point_price"
+    >
+      <th>
+        Stocks best price for selling 
+      </th>
+       
+      <td>
+        100 USD
+      </td>
+    </tr>
+     
+    <tr
+      id="funds"
+    >
+      <th>
+        Your funds
+      </th>
+       
+      <td>
+        100 USD
+      </td>
+    </tr>
+     
+    <tr
+      id="profit"
+    >
+      <th>
+        Your profit
+      </th>
+       
+      <td>
+        900.00 USD
+      </td>
+    </tr>
+  </table>
+</section>
+`;
