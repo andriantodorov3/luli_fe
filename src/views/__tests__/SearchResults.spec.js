@@ -3,7 +3,7 @@ import Komponent from '@/views/SearchResults.vue'
 import moment from "moment";
 import flushPromises from 'flush-promises';
 
-const someTimestamp = 1660112800;
+const someTimestamp = 1660112801;
 
 describe('SearchResults.vue', () => {
     const props = {
@@ -27,7 +27,7 @@ describe('SearchResults.vue', () => {
         const wrapper = shallowMount(Komponent, {
             propsData: props
         })
-        const target = moment.unix(props.sell_point * 1000).format(props.date_format);
+        const target = moment.unix(props.sell_point).format(props.date_format);
         expect(wrapper.find('#sell_point_date td').text()).toMatch(`${target}`)
     })
 
@@ -95,7 +95,8 @@ describe('Snapshot', () => {
             buy_point_price: 10,
             sell_point_price: 100,
             funds: 100,
-            date_format: "MMMM Do YYYY, h:mm:ss a"
+            //this is to avoid timezone offsets for ci
+            date_format: 'x'
         };
 
         const wrapper = mount(Komponent, {
