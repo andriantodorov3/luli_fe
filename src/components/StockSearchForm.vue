@@ -105,7 +105,7 @@ export default {
 
   data() {
     return {
-      funds: 1,
+      funds: 100,
       date_picker_start: null,
       date_picker_end: null,
     };
