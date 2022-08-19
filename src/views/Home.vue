@@ -74,7 +74,7 @@ export default {
       this.searchPayload = payload;
 
       try {
-        const apiData = await searchStocks(payload);
+        const apiData = await searchStocks({start_time: payload.start_time, end_time: payload.end_time});
         this.searchResults = apiData.data;
         this.searchSuccess = true;
 
