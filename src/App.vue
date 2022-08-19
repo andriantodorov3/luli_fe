@@ -12,11 +12,12 @@
 </template>
 
 <script>
-import AppTopBar from "./components/AppTopBar.vue";
-import Drawer from "./components/Drawer.vue";
-import Notification from "./components/Notification.vue";
 export default {
   name: "App",
-  components: { AppTopBar, Drawer, Notification },
+  components: {
+    AppTopBar: () => import("./components/AppTopBar.vue"),
+    Drawer: () => import("./components/Drawer.vue"),
+    Notification: () => import("./components/Notification.vue"),
+  },
 };
 </script>

@@ -69,7 +69,6 @@ export default {
 </script>
 
 <style lang="sass">
-#default-drawer
 .v-list-item
   margin-bottom: 8px
 
