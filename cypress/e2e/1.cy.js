@@ -19,8 +19,8 @@ describe('Main', () => {
     })
 
 
-    it('cannot submit before filling in the form', () => {
-        cy.get('#search-btn').should('be.disabled')
+    it('can submit before filling in the form (use the defaults)', () => {
+        cy.get('#search-btn').should('not.be.disabled')
     })
 
 
