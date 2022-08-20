@@ -213,7 +213,8 @@ exports[`Snapshot Checks snapshot 1`] = `
         class="col-sm-12 col-md-12 col-lg-12 col"
       >
         <button
-          class="submit-btn v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--x-large blue"
+          class="submit-btn v-btn v-btn--disabled v-btn--has-bg theme--light v-size--x-large"
+          disabled="disabled"
           id="search-btn"
           type="button"
         >
