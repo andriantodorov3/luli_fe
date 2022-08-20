@@ -26,7 +26,7 @@ describe('Loading checks', () => {
         expect(wrapper.find('#search-btn').attributes().disabled).toBeDefined()
     })
 
-    it('Submit btn is disabled when NOT loading but form not filled in', () => {
+    it('Submit btn is NOT disabled with default form content', () => {
         const props = {
             end_errors: [],
             start_errors: [],
@@ -36,7 +36,7 @@ describe('Loading checks', () => {
         const wrapper = shallowMount(Komponent, {
             propsData: props
         })
-        expect(wrapper.find('#search-btn').attributes().disabled).toBeDefined()
+        expect(wrapper.find('#search-btn').attributes().disabled).not.toBeDefined()
     })
 
 
