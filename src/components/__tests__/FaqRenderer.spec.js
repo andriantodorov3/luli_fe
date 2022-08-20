@@ -37,7 +37,6 @@ describe('FaqRenderer.vue', () => {
         expect(wrapper.findAll('.v-list-item__content .v-list-item__subtitle').at(0).text()).toBe(props.items[0].title)
     })
 
-
     it('Text matches', () => {
         const wrapper = mount(Komponent, {
 
@@ -46,7 +45,4 @@ describe('FaqRenderer.vue', () => {
 
         expect(wrapper.findAll('.v-list-item__content .v-list-item__subtitle').at(1).text()).toBe(props.items[0].text)
     })
-
-
-
 })

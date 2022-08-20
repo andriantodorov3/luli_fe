@@ -9,7 +9,6 @@ describe('Loading.vue', () => {
         expect(wrapper.html()).toContain(text)
     })
 
-
     it('Check default slot overload', () => {
         const text = 'some text';
         const wrapper = shallowMount(Komponent, {

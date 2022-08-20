@@ -10,15 +10,11 @@ import VueRouter from 'vue-router'
 
 describe('AppTopBar.vue', () => {
 
-
-
-
     const localVue = createLocalVue()
     let vuetify
 
     const router = new VueRouter()
 
-    //localVue.use(VueRouter)
 
     beforeEach(() => {
         vuetify = new Vuetify()
