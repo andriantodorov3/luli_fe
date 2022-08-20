@@ -1,5 +1,5 @@
 <template>
-  <v-list>
+  <v-list three-line>
     <v-list-item-group color="primary">
       <v-list-item v-for="(item, i) in items" :key="i">
         <v-list-item-content>
@@ -11,8 +11,9 @@
 
           <v-list-item-subtitle
             class="text--primary"
-            v-text="item.text"
+            v-html="item.text"
           ></v-list-item-subtitle>
+          <v-divider />
         </v-list-item-content>
       </v-list-item>
     </v-list-item-group>
