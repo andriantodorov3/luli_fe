@@ -63,7 +63,7 @@
             x-large
             color="blue"
             @click="validate"
-            :disabled="loading"
+            :disabled="loading || !formIsValid"
             id="search-btn"
           >
             <template v-if="loading">
