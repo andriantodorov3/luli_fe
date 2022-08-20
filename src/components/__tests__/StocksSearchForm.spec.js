@@ -11,7 +11,6 @@ import flushPromises from 'flush-promises';
 
 import VueRouter from 'vue-router'
 
-
 describe('Loading checks', () => {
     it('Submit btn is disabled when loading', () => {
         const props = {

@@ -76,17 +76,10 @@ describe('SearchResults.vue', () => {
         const target = (stocksCount * props.sell_point_price - props.funds).toFixed(2);
         expect(wrapper.find('#profit td').text()).toMatch(`${target} USD`)
     })
-
-
 })
 
-
-
 describe('Snapshot', () => {
-
     const localVue = createLocalVue()
-
-
 
     it('Checks snapshot', async() => {
         const props = {

@@ -43,7 +43,6 @@ describe('API Success', () => {
             router
         });
 
-
         const searchPayload = {
             end_time: 1660039860,
             funds: 100,
@@ -57,5 +56,4 @@ describe('API Success', () => {
         expect(wrapper.vm.start_errors.length).toBe(0);
         expect(wrapper.vm.end_errors.length).toBe(0);
     })
-
 })

@@ -6,5 +6,4 @@ describe('DrawerHeader.vue', () => {
         mount(Komponent)
         return;
     })
-
 })

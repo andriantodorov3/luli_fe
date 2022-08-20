@@ -162,6 +162,4 @@ describe('Notification.vue', () => {
         expect(wrapper.vm.shown).toBeFalsy();
     })
 
-
-
 })

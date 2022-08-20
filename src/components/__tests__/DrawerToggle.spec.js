@@ -61,7 +61,4 @@ describe('DrawerToggle.vue', () => {
         await flushPromises();
         expect(wrapper.find('#mini-toggler .v-icon').classes()).toContain('mdi-dots-vertical');
     })
-
-
-
 })

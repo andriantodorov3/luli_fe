@@ -6,5 +6,4 @@ describe('HomeButton.vue', () => {
         shallowMount(Komponent)
         return;
     })
-
 })

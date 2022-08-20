@@ -32,7 +32,6 @@ describe('Drawer.vue', () => {
             store,
             router
         }, );
-        //one in the header as well
         expect(wrapper.findComponent(DrawerHeader).exists()).toBe(true)
     })
 
