@@ -12,7 +12,7 @@ const routes = [{
 
     {
         path: '/feinfo',
-        name: 'Frontend Specs',
+        name: 'More about the  frontend',
         component:
             () =>
             import ('../views/Frontend.vue')
@@ -20,7 +20,7 @@ const routes = [{
 
     {
         path: '/beinfo',
-        name: 'Backend Specs',
+        name: 'More about the backend',
         component: () =>
             import ('../views/Backend.vue')
     },
