@@ -1,7 +1,7 @@
 <template>
   <v-container class="new-capsule-wrapper lighten-5" :fluid="true">
     <v-row justify="space-around">
-      <v-col col="6" sm="12" md="8">
+      <v-col cols="12" md="8">
         <v-card class="search-page elevation-5">
           <v-card-title>Stocks analyst</v-card-title>
           <v-card-text>
@@ -23,7 +23,7 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col col="6" sm="12" md="4">
+      <v-col cols="12" md="4">
         <v-card class="search-page-results elevation-5">
           <v-card-title>Results</v-card-title>
           <v-card-text>

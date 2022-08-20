@@ -8,8 +8,7 @@ exports[`Snapshot Checks snapshot 1`] = `
     class="row justify-space-around"
   >
     <div
-      class="col-sm-12 col-md-8 col"
-      col="6"
+      class="col-md-8 col-12"
     >
       <div
         class="search-page elevation-5 v-card v-sheet theme--light"
@@ -271,8 +270,7 @@ exports[`Snapshot Checks snapshot 1`] = `
     </div>
      
     <div
-      class="col-sm-12 col-md-4 col"
-      col="6"
+      class="col-md-4 col-12"
     >
       <div
         class="search-page-results elevation-5 v-card v-sheet theme--light"
