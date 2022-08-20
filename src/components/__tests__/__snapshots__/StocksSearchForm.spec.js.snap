@@ -28,7 +28,7 @@ exports[`Snapshot Checks snapshot 1`] = `
         class="col-sm-6 col-md-8 col-lg-9 col"
       >
         <div
-          class="v-input d-inline-flex ml-2 v-input--is-label-active v-input--dense theme--light v-text-field v-text-field--enclosed v-text-field--outlined"
+          class="v-input d-inline-flex ml-2 v-input--is-label-active v-input--is-dirty v-input--dense theme--light v-text-field v-text-field--enclosed v-text-field--outlined"
         >
           <div
             class="v-input__control"
@@ -82,7 +82,7 @@ exports[`Snapshot Checks snapshot 1`] = `
         </div>
          
         <div
-          class="v-input d-inline-flex ml-2 v-input--is-label-active v-input--dense theme--light v-text-field v-text-field--enclosed v-text-field--outlined"
+          class="v-input d-inline-flex ml-2 v-input--is-label-active v-input--is-dirty v-input--dense theme--light v-text-field v-text-field--enclosed v-text-field--outlined"
         >
           <div
             class="v-input__control"
@@ -213,8 +213,7 @@ exports[`Snapshot Checks snapshot 1`] = `
         class="col-sm-12 col-md-12 col-lg-12 col"
       >
         <button
-          class="submit-btn v-btn v-btn--disabled v-btn--has-bg theme--light v-size--x-large"
-          disabled="disabled"
+          class="submit-btn v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--x-large blue"
           id="search-btn"
           type="button"
         >

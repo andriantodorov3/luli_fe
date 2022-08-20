@@ -106,8 +106,8 @@ export default {
   data() {
     return {
       funds: 100,
-      date_picker_start: null,
-      date_picker_end: null,
+      date_picker_start: '2022-08-02T20:20',
+      date_picker_end: '2022-08-04T20:20',
     };
   },
   methods: {
